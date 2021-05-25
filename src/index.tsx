@@ -1,4 +1,7 @@
 import ReactDOM from "react-dom";
 
-const element = <h1>Hallo Bochum und Dortmund!</h1>;
-ReactDOM.render(element, document.getElementById("root"));
+function App() {
+  return <h1>Hallo Visus!</h1>;
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
