@@ -1,9 +1,11 @@
+import React from "react";
+
 interface Props {
   opinion: string;
   name: string;
 }
 
-const MessageView = ({ opinion, name }: Props): JSX.Element => {
+const MessageView: React.FunctionComponent<Props> = ({ opinion, name }) => {
   return (
     <article>
       {opinion}
