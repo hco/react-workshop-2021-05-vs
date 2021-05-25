@@ -4,3 +4,5 @@ export interface Message {
   author: string;
   date: number;
 }
+
+export default Message;

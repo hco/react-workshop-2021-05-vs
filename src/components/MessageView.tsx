@@ -1,15 +1,11 @@
 import React from "react";
+import Message from "../domain/Message";
 
-interface Props {
-  opinion: string;
-  name: string;
-}
-
-const MessageView: React.FunctionComponent<Props> = ({ opinion, name }) => {
+const MessageView: React.FunctionComponent<Message> = ({ message, author }) => {
   return (
     <article>
-      {opinion}
-      <footer>{name}</footer>
+      {message}
+      <footer>{author.toUpperCase()}</footer>
     </article>
   );
 };

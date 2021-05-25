@@ -1,7 +1,14 @@
 import MessageView from "./components/MessageView";
 
 export function App() {
-  return <MessageView opinion="React ist cool" name="Team Grün" />;
+  return (
+    <MessageView
+      message="React ist cool"
+      author="Team Grün"
+      id={answer.toString()}
+      date={Date.now()}
+    />
+  );
 }
 
 export const answer = 42;
