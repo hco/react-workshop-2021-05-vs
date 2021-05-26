@@ -1,11 +1,15 @@
 import React from "react";
 import Message from "../domain/Message";
 
-const MessageView: React.FunctionComponent<Message> = ({ message, author }) => {
+interface Props {
+  message: Message;
+}
+
+const MessageView: React.FunctionComponent<Props> = ({ message }) => {
   return (
     <article>
-      {message}
-      <footer>{author.toUpperCase()}</footer>
+      {message.message}
+      <footer>{message.author.toUpperCase()}</footer>
     </article>
   );
 };
