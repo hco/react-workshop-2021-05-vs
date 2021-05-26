@@ -1,3 +1,4 @@
+import MessageCompose from "./components/MessageCompose";
 import MessageView from "./components/MessageView";
 import Message from "./domain/Message";
 
@@ -9,7 +10,15 @@ export function App() {
     date: Date.now(),
   };
 
-  return <MessageView message={message} />;
+  return (
+    <>
+      <MessageCompose />
+      <MessageCompose />
+      <MessageCompose />
+      <MessageCompose />
+      <MessageView message={message} />
+    </>
+  );
 }
 
 export const answer = 42;

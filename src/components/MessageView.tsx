@@ -1,8 +1,8 @@
-import React from "react";
-import Message from "../domain/Message";
+import React from "react"
+import Message from "../domain/Message"
 
 interface Props {
-  message: Message;
+  message: Message
 }
 
 const MessageView: React.FunctionComponent<Props> = ({ message }) => {
@@ -11,7 +11,7 @@ const MessageView: React.FunctionComponent<Props> = ({ message }) => {
       {message.message}
       <footer>{message.author.toUpperCase()}</footer>
     </article>
-  );
-};
+  )
+}
 
-export default MessageView;
+export default MessageView
