@@ -27,7 +27,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "backend": "json-server --watch database.json -p 4712"
+    "backend": "json-server --watch database.json -p 4712",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +50,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/addons": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
     "@types/styled-components": "^5.1.9",
     "prettier": "2.2.1"
   }
