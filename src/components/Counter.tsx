@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Counter: React.FunctionComponent = () => {
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    // @ts-ignore
+    document.title = counter;
+  }, [counter]);
 
   return (
     <div>
@@ -9,7 +14,7 @@ const Counter: React.FunctionComponent = () => {
       <button
         onClick={() => {
           console.log("on click funktioniert");
-          setCounter((prevCounter) => prevCounter + 1);
+          setCounter(counter + 1);
         }}
       >
         Erhöhen

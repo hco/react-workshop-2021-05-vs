@@ -12,14 +12,14 @@ export function App() {
   };
 
   return (
-    <>
-      <Counter />
-      <MessageCompose />
-      <MessageCompose />
-      <MessageCompose />
+    <div style={{ border: "1px solid pink" }}>
+      <div style={{ border: "1px solid green" }}>
+        <Counter />
+        <Counter />
+      </div>
       <MessageCompose />
       <MessageView message={message} />
-    </>
+    </div>
   );
 }
 
