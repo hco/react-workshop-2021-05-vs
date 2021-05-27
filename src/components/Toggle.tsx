@@ -1,16 +1,19 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
+import Clock from "./Clock";
 
 function Toggle() {
   const [isToggleOn, setToggle] = useState(false);
 
   const handleClick = () => {
-    setToggle(function (currentValueOfIsToggleOn) {
-      return !currentValueOfIsToggleOn;
-    });
-    setToggle((v) => !v);
+    setToggle((prevToggleValue) => !prevToggleValue);
   };
 
-  return <button onClick={handleClick}>{isToggleOn ? "ON" : "OFF"}</button>;
+  return (
+    <>
+      <button onClick={handleClick}>{isToggleOn ? "ON" : "OFF"}</button>
+      {isToggleOn && <Clock />}
+    </>
+  );
 }
 
 export default Toggle;
