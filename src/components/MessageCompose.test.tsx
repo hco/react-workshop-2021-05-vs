@@ -21,7 +21,7 @@ describe("<MessageCompose />", () => {
     expect(input).toHaveValue("Hallo Janek!");
   });
 
-  test("when submitting a message, the event handler should be called", () => {
+  test("when clicking the submit button, the event handler should be called", () => {
     const handleNewMessage = jest.fn();
 
     // Arrange
@@ -34,6 +34,24 @@ describe("<MessageCompose />", () => {
     // Act
     userEvent.type(input, "Hallo Janek!");
     userEvent.click(button);
+
+    // Assert
+    expect(handleNewMessage).toHaveBeenCalled();
+    expect(handleNewMessage).toHaveBeenCalledWith("Hallo Janek!");
+    expect(handleNewMessage).toHaveBeenCalledTimes(1);
+  });
+
+  test("when hitting enter, the event handler should be called", () => {
+    const handleNewMessage = jest.fn();
+
+    // Arrange
+    const { getByPlaceholderText } = render(
+      <MessageCompose onNewMessage={handleNewMessage} />
+    );
+    const input = getByPlaceholderText("Neue Nachricht...");
+
+    // Act
+    userEvent.type(input, "Hallo Janek!{enter}");
 
     // Assert
     expect(handleNewMessage).toHaveBeenCalled();
