@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MessageView /> it renders according to snapshot 1`] = `
+<div>
+  <article>
+    Bald ist Wochenende!
+    <footer>
+      HANNAH
+    </footer>
+  </article>
+</div>
+`;

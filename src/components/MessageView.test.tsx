@@ -18,4 +18,15 @@ describe("<MessageView />", () => {
     const { queryByText } = render(<MessageView message={testMessage} />);
     expect(queryByText("Bald ist Wochenende!")).not.toBeNull();
   });
+
+  test("it renders the author name in upper case", () => {
+    const { queryByText } = render(<MessageView message={testMessage} />);
+    expect(queryByText("HANNAH")).not.toBeNull();
+  });
+
+  test("it renders according to snapshot", () => {
+    const { container } = render(<MessageView message={testMessage} />);
+
+    expect(container).toMatchSnapshot();
+  });
 });
