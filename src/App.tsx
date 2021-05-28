@@ -2,6 +2,7 @@ import { useState } from "react";
 import Counter from "./components/Counter";
 import MessageCompose from "./components/MessageCompose";
 import MessageList from "./components/MessageList";
+import ServerMessageList from "./components/ServerMessageList";
 import Toggle from "./components/Toggle";
 import Message from "./domain/Message";
 
@@ -29,6 +30,7 @@ export function App() {
       <MessageList messages={messages} />
       <MessageCompose onNewMessage={handleNewMessage} />
       <Toggle />
+      <ServerMessageList />
     </div>
   );
 }
