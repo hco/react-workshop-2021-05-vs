@@ -27,6 +27,12 @@ describe("<MessageView />", () => {
   test("it renders according to snapshot", () => {
     const { container } = render(<MessageView message={testMessage} />);
 
+    expect({ hallo: "welt" }).toMatchInlineSnapshot(`
+      Object {
+        "hallo": "welt",
+      }
+    `);
+
     expect(container).toMatchSnapshot();
   });
 });
