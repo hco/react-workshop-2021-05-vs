@@ -8,8 +8,14 @@ const testMessage: Message = {
   id: "huodfasiojadsjiodas",
   message: "Bald ist Wochenende!",
 };
+
 describe("<MessageView />", () => {
   test("it renders without crashing", () => {
     render(<MessageView message={testMessage} />);
+  });
+
+  test("it renders the message text", () => {
+    const { queryByText } = render(<MessageView message={testMessage} />);
+    expect(queryByText("Bald ist Wochenende!")).not.toBeNull();
   });
 });
