@@ -28,7 +28,7 @@ const MessageCompose: React.FunctionComponent<Props> = ({ onNewMessage }) => {
         type="text"
         onChange={handleChange}
       />
-      <input type="submit" value="Klick mich" />
+      <input type="submit" value="Nachricht absenden" />
     </form>
   );
 };
