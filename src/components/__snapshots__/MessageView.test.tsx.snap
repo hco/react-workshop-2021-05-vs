@@ -5,7 +5,7 @@ exports[`<MessageView /> it renders according to snapshot 1`] = `
   <article>
     Bald ist Wochenende!
     <footer>
-      HANNAH
+      hannah
     </footer>
   </article>
 </div>

@@ -21,7 +21,7 @@ describe("<MessageView />", () => {
 
   test("it renders the author name in upper case", () => {
     const { queryByText } = render(<MessageView message={testMessage} />);
-    expect(queryByText("HANNAH")).not.toBeNull();
+    expect(queryByText("hannah")).not.toBeNull();
   });
 
   test("it renders according to snapshot", () => {
