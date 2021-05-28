@@ -1,4 +1,6 @@
+import { render } from "@testing-library/react";
 import Message from "../domain/Message";
+import MessageView from "./MessageView";
 
 const testMessage: Message = {
   author: "Hannah",
@@ -6,6 +8,8 @@ const testMessage: Message = {
   id: "huodfasiojadsjiodas",
   message: "Bald ist Wochenende!",
 };
-describe("", () => {
-  test("", () => {});
+describe("<MessageView />", () => {
+  test("it renders without crashing", () => {
+    render(<MessageView message={testMessage} />);
+  });
 });
